@@ -1,0 +1,33 @@
+# .htaccess in root directory
+
+# Enable rewrite engine
+RewriteEngine On
+
+# Prevent directory listing
+Options -Indexes
+
+# Security headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+
+# Redirect all requests to index.html (for SPA)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/backend
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteRule ^ index.html [L]
+
+# Protect admin directory
+<FilesMatch "\.(php|html)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Protect backend API
+<Directory "/backend">
+    # Allow CORS for development
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</Directory>

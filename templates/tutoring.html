@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boniface Kathu</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+<header>
+        <div class="container header-container">
+            <div class="logo">Boniface<span>Kathu</span></div>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="about.html" >About</a></li>
+                    <li><a href="portfolio.html" >Portfolio</a></li>
+                    <li><a href="tutoring.html">Tutoring</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+<section id="tutoring">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tutoring & Mentoring Program</h2>
+                <p>Join my personalized program to accelerate your development skills</p>
+            </div>
+            <div class="tutoring-content">
+                <div class="program-info">
+                    <h3>Become a Confident Developer</h3>
+                    <p>My tutoring and mentoring program is designed to help aspiring and junior developers build strong foundations, learn industry best practices, and gain the confidence to tackle real-world projects.</p>
+                    <p><strong>Program Highlights:</strong></p>
+                    <ul>
+                        <li>One-on-one weekly mentoring sessions</li>
+                        <li>Personalized learning path based on your goals</li>
+                        <li>Code reviews and portfolio building</li>
+                        <li>Interview preparation and career guidance</li>
+                        <li>Access to exclusive project resources</li>
+                        <li>Monthly group workshops and Q&A sessions</li>
+                    </ul>
+                    <p><strong>Who should join:</strong> Beginners learning web development, junior developers looking to level up, career changers entering tech, or anyone needing structured guidance in their coding journey.</p>
+                    <p><strong>Duration:</strong> 3-month program with flexible scheduling options</p>
+                    <p><strong>Investment:</strong> $299/month or $799 for the full 3-month program</p>
+                </div>
+                <div class="registration-form">
+                    <h3 style="color: var(--primary); margin-bottom: 20px;">Registration Form</h3>
+                    <form id="mentoringForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Current Experience Level</label>
+                            <select id="experience" class="form-control" required>
+                                <option value="">Select your level</option>
+                                <option value="beginner">Beginner (0-6 months)</option>
+                                <option value="intermediate">Intermediate (6-18 months)</option>
+                                <option value="advanced">Advanced (18+ months)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="focus">Primary Focus Area</label>
+                            <select id="focus" class="form-control" required>
+                                <option value="">Select focus area</option>
+                                <option value="frontend">Frontend Development</option>
+                                <option value="backend">Backend Development</option>
+                                <option value="fullstack">Full Stack Development</option>
+                                <option value="mobile">Mobile Development</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="goals">Learning Goals</label>
+                            <textarea id="goals" class="form-control" rows="4" placeholder="What do you hope to achieve through this program?"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule">Preferred Schedule</label>
+                            <select id="schedule" class="form-control" required>
+                                <option value="">Select preferred schedule</option>
+                                <option value="weekday_mornings">Weekday Mornings</option>
+                                <option value="weekday_evenings">Weekday Evenings</option>
+                                <option value="weekends">Weekends</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms" required>
+                            <label for="terms">I agree to the terms and conditions of the mentoring program</label>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter">
+                            <label for="newsletter">Subscribe to my monthly coding tips newsletter</label>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Apply for the Program</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Boniface<span>Kathu</span></div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="tutoring.html">Tutoring</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p class="copyright">&copy; 2026 Boniface Kathu. All rights reserved. | Designed with passion for education and innovation</p>
+        </div>
+    </footer>
+    <script src="backend/updated.js"></script>
+</body>
+</html>
