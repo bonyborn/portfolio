@@ -218,15 +218,15 @@ CREATE TABLE IF NOT EXISTS blog_post_categories (
 -- Insert admin user (password: Admin123! - hashed with bcrypt)
 INSERT INTO users (username, email, password_hash, full_name, title, bio, profile_image_url, phone, location) 
 VALUES (
-    'alexmorgan', 
-    'alex@morgan.dev', 
+    'Boniface Nzau', 
+    'nzauboniface76@gmail.com', 
     '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', -- bcrypt hash for "Admin123!"
     'Alex Morgan', 
     'Full-Stack Developer & Mentor',
     'Passionate about creating elegant web solutions and empowering the next generation of developers through personalized mentoring and tutoring programs.',
-    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=774&q=80',
-    '+1 (555) 123-4567',
-    'San Francisco, California'
+    'c:\users\USER\Desktop\PROJECT\static\bonie.png',
+    '+254 (759-919-826)',
+    'Mwingi, Kitui'
 );
 
 -- Insert skills
@@ -310,39 +310,39 @@ INSERT INTO program_benefits (program_id, benefit_text, display_order) VALUES
 
 -- Insert social links
 INSERT INTO social_links (platform_name, platform_icon, profile_url, display_order, is_active) VALUES
-('GitHub', 'fab fa-github', 'https://github.com/alexmorgan', 1, TRUE),
-('LinkedIn', 'fab fa-linkedin-in', 'https://linkedin.com/in/alexmorgan', 2, TRUE),
-('Twitter', 'fab fa-twitter', 'https://twitter.com/alexmorgan', 3, TRUE),
-('YouTube', 'fab fa-youtube', 'https://youtube.com/@alexmorgan', 4, TRUE),
-('Codepen', 'fab fa-codepen', 'https://codepen.io/alexmorgan', 5, TRUE);
+('GitHub', 'fab fa-github', 'https://github.com/nzauboniface-svg76/Nuu', 1, TRUE),
+('LinkedIn', 'fab fa-linkedin-in', 'https://www.linkedin.com/jobs/', 2, TRUE),
+('Twitter', 'fab fa-twitter', 'https://x.com/home', 3, TRUE),
+('YouTube', 'fab fa-youtube', 'https://www.youtube.com/@BONIFACENZAU-j5m', 4, TRUE),
+('Codepen', 'fab fa-codepen', 'https://codepen.io/pen?welcome=true', 5, TRUE);
 
 -- Insert testimonials
 INSERT INTO testimonials (person_name, person_title, person_company, content, rating, approved, featured, display_order) VALUES
 (
-    'Sarah Johnson',
+    'John Paul',
     'Frontend Developer',
     'TechCorp Inc.',
-    'Alex\'s mentoring program transformed my career. Within 3 months, I went from knowing basics to landing my first developer job. The personalized approach made all the difference!',
+    'Nzau's 's mentoring program transformed my career. Within 3 months, I went from knowing basics to landing my first developer job. The personalized approach made all the difference!',
     5,
     TRUE,
     TRUE,
     1
 ),
 (
-    'Michael Chen',
+    'Michael Muthui',
     'Full-Stack Developer',
     'StartupXYZ',
-    'The portfolio review session was incredibly valuable. Alex pointed out improvements I never would have thought of. My GitHub profile looks professional now!',
+    'The portfolio review session was incredibly valuable. Boniface pointed out improvements I never would have thought of. My GitHub profile looks professional now!',
     5,
     TRUE,
     TRUE,
     2
 ),
 (
-    'Jessica Williams',
+    'Willis',
     'Career Changer',
     '',
-    'As someone switching careers into tech, I was overwhelmed. Alex broke everything down into manageable steps and provided constant support. Highly recommended!',
+    'As someone switching careers into tech, I was overwhelmed. Boniface broke everything down into manageable steps and provided constant support. Highly recommended!',
     5,
     TRUE,
     TRUE,
@@ -351,11 +351,11 @@ INSERT INTO testimonials (person_name, person_title, person_company, content, ra
 
 -- Insert site settings
 INSERT INTO site_settings (setting_key, setting_value, setting_type, description) VALUES
-('site_title', 'Alex Morgan | Developer & Mentor', 'string', 'Website title'),
+('site_title', 'Boniface Nzau | Developer & Mentor', 'string', 'Website title'),
 ('site_tagline', 'Empowering developers through mentorship', 'string', 'Website tagline'),
-('contact_email', 'alex@morgan.dev', 'string', 'Primary contact email'),
+('contact_email', 'nzauboniface76@gmail.com', 'string', 'Primary contact email'),
 ('mentoring_active', 'true', 'boolean', 'Whether mentoring program is accepting applications'),
-('max_registrations_per_month', '10', 'number', 'Maximum registrations to accept per month'),
+('max_registrations_per_month', '25', 'number', 'Maximum registrations to accept per month'),
 ('newsletter_signup_enabled', 'true', 'boolean', 'Whether newsletter signup is enabled'),
 ('maintenance_mode', 'false', 'boolean', 'Whether site is in maintenance mode'),
 ('google_analytics_id', '', 'string', 'Google Analytics tracking ID');
@@ -545,14 +545,14 @@ CREATE INDEX idx_blog_slug ON blog_posts(slug);
 
 -- Insert sample mentoring registrations
 INSERT INTO mentoring_registrations (program_id, full_name, email, phone, experience_level, focus_area, learning_goals, preferred_schedule, agreed_to_terms, subscribe_newsletter, status) VALUES
-(1, 'John Doe', 'john@example.com', '+1234567890', 'beginner', 'frontend', 'Learn React and build a portfolio', 'weekday_evenings', TRUE, TRUE, 'accepted'),
-(1, 'Jane Smith', 'jane@example.com', '+0987654321', 'intermediate', 'fullstack', 'Master backend development with Node.js', 'weekends', TRUE, FALSE, 'pending'),
-(1, 'Robert Johnson', 'robert@example.com', '+1122334455', 'beginner', 'mobile', 'Learn React Native for mobile apps', 'flexible', TRUE, TRUE, 'accepted');
+(1, 'John paul', 'john@example.com', '+1234567890', 'beginner', 'frontend', 'Learn React and build a portfolio', 'weekday_evenings', TRUE, TRUE, 'accepted'),
+(1, 'Jane kyalo', 'jane@example.com', '+0987654321', 'intermediate', 'fullstack', 'Master backend development with Node.js', 'weekends', TRUE, FALSE, 'pending'),
+(1, 'Robert kamau', 'robert@example.com', '+1122334455', 'beginner', 'mobile', 'Learn React Native for mobile apps', 'flexible', TRUE, TRUE, 'accepted');
 
 -- Insert sample contact messages
 INSERT INTO contact_messages (name, email, subject, message, is_read, responded) VALUES
-('Alice Brown', 'alice@example.com', 'Consultation Inquiry', 'I would like to schedule a consultation about your mentoring program.', TRUE, TRUE),
-('Bob Wilson', 'bob@example.com', 'Project Collaboration', 'I have a project idea and would like to discuss potential collaboration.', FALSE, FALSE);
+('Alice ochieng', 'alice@example.com', 'Consultation Inquiry', 'I would like to schedule a consultation about your mentoring program.', TRUE, TRUE),
+('Bob Wekesa', 'bob@example.com', 'Project Collaboration', 'I have a project idea and would like to discuss potential collaboration.', FALSE, FALSE);
 
 -- Insert newsletter subscribers
 INSERT INTO newsletter_subscribers (email, name) VALUES

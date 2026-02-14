@@ -1,0 +1,20 @@
+# Enable rewrite engine
+RewriteEngine On
+Options -Indexes
+
+# Security headers
+Header set X-Content-Type-Options "nosniff"
+Header set X-Frame-Options "SAMEORIGIN"
+Header set X-XSS-Protection "1; mode=block"
+
+# SPA routing: redirect all requests to index.html except backend and admin
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/backend
+RewriteCond %{REQUEST_URI} !^/admin
+RewriteRule ^ index.html [L]
+
+# Allow PHP and HTML files to be accessed normally
+<FilesMatch "\.(php|html)$">
+    Require all granted
+</FilesMatch>
